@@ -1,7 +1,9 @@
 
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import Cabecalho from "./src/components/cabecalho";
 import Botao from "./src/components/Botao";
+import Jogos from "./src/components/jogos";
+import JOGOS from "./src/dados/jogos";
 
 
 export default function App() {
@@ -12,6 +14,31 @@ export default function App() {
       <Botao texto="Filmes" logo="ios-film-outline" logo2="musical-notes" texto2='Musicas' cor2="blue" cor="#fcd303"/>
       <Botao texto="Livros" logo="ios-book" logo2="newspaper-outline" texto2='Noticia' cor2="red" cor="#03c6fc"/>
 
+      <View>
+        <FlatList
+          horizontal
+          contentContainerStyle={estilos.jogos}
+          data = {JOGOS}
+          keyExtractor = {(item) => item.id}
+          renderItem = {({item}) => (
+            <Jogos
+              titulo = {item.nome}
+              imagem = {item.imagem}
+              valor = {item.valor}
+            />
+          )}
+          />
+
+
+      </View>
+
      </View>
   );
 }
+
+const estilos = StyleSheet.create({
+  jogos: {
+    justifyContent: 'center',
+    flexGrow: 1
+  }
+})
