@@ -49,5 +49,6 @@ const estilo = StyleSheet.create({
         fontSize:12,
         color:'white',
         flexDirection:'row',
+        borderRadius: "8px"
     }
 })

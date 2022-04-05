@@ -1,5 +1,5 @@
 
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View, Image } from "react-native";
 import Cabecalho from "./src/components/cabecalho";
 import Botao from "./src/components/Botao";
 import Jogos from "./src/components/jogos";
@@ -31,6 +31,8 @@ export default function App() {
 
 
       </View>
+
+      <Image source={require('./src/imagens/banner.jpg')} style={{width: 500, height: 400 }} />
 
      </View>
   );

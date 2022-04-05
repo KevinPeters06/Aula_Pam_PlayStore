@@ -34,5 +34,26 @@ const JOGOS = [
         valor : "$18,00",
         imagem: 'dbz.jpg'
     },
+
+    {
+        id : "06",
+        nome : "Pokemon Emerald",
+        valor : "$100,00",
+        imagem: 'emerald.jpg'
+    },
+
+    {
+        id : "07",
+        nome : "PacMan",
+        valor : "$5,00",
+        imagem: 'pacman.jpg'
+    },
+
+    {
+        id : "08",
+        nome : "Mario",
+        valor : "$300,00",
+        imagem: 'mario.jpg'
+    },
 ]
 export default JOGOS;
