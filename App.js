@@ -2,7 +2,7 @@
 import { FlatList, StyleSheet, Text, View, Image } from "react-native";
 import Cabecalho from "./src/components/cabecalho";
 import Botao from "./src/components/Botao";
-import Jogos from "./src/components/jogos";
+import Jogos from './src/components/Jogos'
 import JOGOS from "./src/dados/jogos";
 
 
