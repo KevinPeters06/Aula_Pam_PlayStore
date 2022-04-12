@@ -15,6 +15,6 @@ export const commingSoon = [
         id: '3',
         nome: 'Pacman mobile',
         imagem: 'pacman.jpg',
-        data: 'Em breve'
+        data: '28/03/22'
     }
 ]
