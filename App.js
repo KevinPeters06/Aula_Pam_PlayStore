@@ -4,6 +4,8 @@ import Cabecalho from "./src/components/cabecalho";
 import Botao from "./src/components/Botao";
 import Jogos from './src/components/Jogos'
 import JOGOS from "./src/dados/jogos";
+import {commingSoon} from './src/dados/commingSoon'
+import {CommingSoonCard} from './src/components/CommingSoonCard'
 
 
 export default function App() {
@@ -27,13 +29,22 @@ export default function App() {
               valor = {item.valor}
             />
           )}
-          />
+        />
 
 
       </View>
 
-      <Image source={require('./src/imagens/banner.jpg')} style={{width: 500, height: 400 }} />
-
+      <Text style={estilos.titulo}>Próximos lançamentos</Text>
+      <View>
+        <FlatList
+          horizontal
+          data={commingSoon}
+          keyExtractor={(item) => item.id}
+          renderItem={({item}) => (
+            <CommingSoonCard data={item.data} imagem={item.imagem} nome={item.nome} />
+          )}
+        />
+      </View>
      </View>
   );
 }
@@ -42,5 +53,8 @@ const estilos = StyleSheet.create({
   jogos: {
     justifyContent: 'center',
     flexGrow: 1
+  },
+  titulo: {
+    fontSize:30
   }
 })
