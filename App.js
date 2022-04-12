@@ -34,7 +34,7 @@ export default function App() {
 
       </View>
 
-      <Text style={estilos.titulo}>Próximos lançamentos</Text>
+      <Text style={estilos.titulo}>Próximos lançamentos </Text>
       <View>
         <FlatList
           horizontal
